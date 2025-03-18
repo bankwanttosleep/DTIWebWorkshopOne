@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ws01-style.css"> <!-- ลิงก์ไปยังไฟล์ CSS -->
+    <style>
+        h1,h2{
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/logo.png" alt="Logo" class="logo"> <!-- รูปภาพ -->
+    <h1>Online Service V.1.0</h1>
+    <h2>"ชำระค่าสาธารณูปโภคหลากหลายเพื่อความสะดวกของคุณ"</h2>
+    <hr>
+    <form>
+        <p>
+            <label for="citizen-id">รหัสประจำตัวประชาชน:</label>
+            <input type="text" id="citizen-id" name="citizen-id" maxlength="13" placeholder="กรอกรหัส 13 หลัก">
+        </p>
+        <p>
+            <label for="fullname">ชื่อ-นามสกุล:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="กรอกชื่อ-นามสกุล">
+        </p>
+        <p>คำนำหน้า:
+            <input type="radio" id="mr" name="prefix" value="mr"><label for="mr">นาย</label>
+            <input type="radio" id="mrs" name="prefix" value="mrs"><label for="mrs">นาง</label>
+            <input type="radio" id="ms" name="prefix" value="ms"><label for="ms">นางสาว</label>
+        </p>
+    </form>
+</body>
+</html>
