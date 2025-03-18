@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SAU Hotel Register</title>
+    <link rel="stylesheet" href="css/ws02-style.css"> 
 </head>
 <body>
-    
+    <div class="container">
+        <img src="images/img2.png" alt="Logo" class="img2"> 
+        <h1>SAU Hotel</h1>
+        <h1>Register</h1>
+        <hr>
+        <form>
+            <p>
+                <label for="fullname">ชื่อ-สกุล :</label>
+                <input type="text" id="fullname" name="fullname">
+            </p>
+            <p>คำนำหน้า :
+                <input type="radio" id="mr" name="prefix" value="mr"><label for="mr">นาย</label>
+                <input type="radio" id="mrs" name="prefix" value="mrs"><label for="mrs">นาง</label>
+                <input type="radio" id="ms" name="prefix" value="ms"><label for="ms">นางสาว</label>
+            </p>
+            <p>
+                <label for="room-type">ประเภทห้อง :</label>
+                <select id="room-type" name="room-type">
+                    <option value="standard">Standard Room (750 บาท/คืน)</option>
+                    <option value="deluxe">Deluxe Room (1500 บาท/คืน)</option>
+                    <option value="suite">Suite Room (3000 บาท/คืน)</option>
+                </select>
+            </p>
+            <p>
+                <label for="nights">จำนวนคืนที่เข้าพัก :</label>
+                <input type="number" id="nights" name="nights"> คืน
+            </p>
+            <p>
+                <label for="guests">จำนวนคนที่เข้าพัก :</label>
+                <input type="number" id="guests" name="guests"> คน
+            </p>
+            <p>
+                <label for="checkin-date">วันที่เข้าพัก :</label>
+                <input type="date" id="checkin-date" name="checkin-date">
+            </p>
+            <p>
+                <label>Option :</label>
+                <input type="checkbox" id="breakfast" name="option" value="breakfast"><label for="breakfast">อาหารเช้า</label><br>
+                <input type="checkbox" id="lunch" name="option" value="lunch"><label for="lunch">อาหารกลางวัน</label><br>
+                <input type="checkbox" id="dinner" name="option" value="dinner"><label for="dinner">อาหารค่ำ</label>
+            </p>
+            <p>
+                <button type="submit">บันทึกข้อมูล</button>
+                <button type="reset">ยกเลิก</button>
+            </p>
+            <hr>
+        </form>
+    </div>
 </body>
 </html>

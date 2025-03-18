@@ -1,38 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/ws01-style.css"> <!-- ลิงก์ไปยังไฟล์ CSS -->
-    <style>
-        h1,h2{
-            text-align: center;
-        }
-        p {
-            text-align: center;
-        }
-    </style>
+    <title>Online Services</title>
+    <link rel="stylesheet" href="css/ws01-style.css">
 </head>
 <body>
-    <img src="images/logo.png" alt="Logo" class="logo"> <!-- รูปภาพ -->
-    <h1>Online Service V.1.0</h1>
-    <h2>"ชำระค่าสาธารณูปโภคหลากหลายเพื่อความสะดวกของคุณ"</h2>
-    <hr>
+    <div>
+        <img src="C:\Users\wongs\DTIWebWorkshopOne\images\logo.png" alt="Online Services" class="centered-image">
+        <h1 class="centered-heading">Online Services V.1.0</h1>
+        <p class="centered-subheading">"ชำระค่าสาธารณูปโภคหลากหลายเพื่อความสะดวกของคุณ"</p>
+        <hr>
+    </div>
     <form>
-        <p>
-            <label for="citizen-id">รหัสประจำตัวประชาชน:</label>
-            <input type="text" id="citizen-id" name="citizen-id" maxlength="13" placeholder="กรอกรหัส 13 หลัก">
-        </p>
-        <p>
-            <label for="fullname">ชื่อ-นามสกุล:</label>
-            <input type="text" id="fullname" name="fullname" placeholder="กรอกชื่อ-นามสกุล">
-        </p>
-        <p>คำนำหน้า:
-            <input type="radio" id="mr" name="prefix" value="mr"><label for="mr">นาย</label>
-            <input type="radio" id="mrs" name="prefix" value="mrs"><label for="mrs">นาง</label>
-            <input type="radio" id="ms" name="prefix" value="ms"><label for="ms">นางสาว</label>
-        </p>
+        <table>
+            <tr>
+                <td>รหัสประจำตัวประชาชน</td>
+                <td><input type="text" name="id"></td>
+            </tr>
+            <tr>
+                <td>คำนำหน้า</td>
+                <td>
+                    <input type="radio" name="prefix" value="นาย"> นาย
+                    <input type="radio" name="prefix" value="นาง"> นาง
+                    <input type="radio" name="prefix" value="นางสาว"> นางสาว
+                </td>
+            </tr>
+            <tr>
+                <td>ชื่อ - สกุล</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>ชำระค่าสาธารณูปโภค</td>
+                <td>
+                    <input type="checkbox" name="utility" value="ประปา"> ประปา <input type="text" name="water" size="10"> บาท<br>
+                    <input type="checkbox" name="utility" value="ไฟฟ้า"> ไฟฟ้า <input type="text" name="electricity" size="10"> บาท
+                </td>
+            </tr>
+            <tr>
+                <td>ชำระค่าโทรศัพท์</td>
+                <td>
+                     <input type="checkbox" name="phone" value="โทรศัพท์บ้าน"> โทรศัพท์บ้าน <input type="text" name="homephone" size="10"> บาท
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="phone" value="AIS"> AIS <input type="text" name="ais" size="10"> บาท<br>
+                    <input type="checkbox" name="phone" value="DTAC"> DTAC <input type="text" name="dtac" size="10"> บาท<br>
+                    <input type="checkbox" name="phone" value="TRUE"> TRUE <input type="text" name="true" size="10"> บาท
+                </td>
+            </tr>
+            <tr>
+                <td>ส่วนลดพิเศษค่าสาธารณูปโภค</td>
+                <td>
+                    <select name="discount">
+                        <option value="ไม่มีส่วนลด">ไม่มีส่วนลด</option>
+                        <option value="5%">5%</option>
+                        <option value="10%">10%</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <div class="button-container">
+            <button type="submit">ชำระค่าบริการ</button>
+            <button type="reset">ยกเลิก</button>
+        </div>
     </form>
+    <p class="centered-text"><strong><u>หมายเหตุ</u></strong> ค่าบริการคิด 15 บาทต่อรายการ โดยคิดเฉพาะการชำระค่าโทรศัพท์เท่านั้น</p>
 </body>
 </html>
